@@ -1,14 +1,13 @@
 package se.typelias.htmxtest.web.pages
 import kotlinx.html.*
 import se.typelias.htmxtest.web.pages.components.card
+import se.typelias.htmxtest.web.pages.components.footerComponent
 import se.typelias.htmxtest.web.pages.components.navbar
 import se.typelias.htmxtest.web.pages.components.standardHTMLTemplate
 
 fun createIndexPage(): String = standardHTMLTemplate("My very good blog or something") {
-    classes = setOf("bg-gray-200", "text-gray-800")
-    navbar().render()
     div {
-        classes = setOf("grid", "grid-flow-col", "auto-cols-max", "gap-4", "m-4", "justify-center")
+        classes = setOf("flex", "gap-4", "flex-wrap", "justify-center", "mt-4")
         card(
             "This page",
             """
@@ -53,4 +52,5 @@ fun createIndexPage(): String = standardHTMLTemplate("My very good blog or somet
             """.trimIndent()
         ).render()
     }
+
 }

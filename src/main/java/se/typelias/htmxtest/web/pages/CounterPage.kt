@@ -8,8 +8,6 @@ import se.typelias.htmxtest.web.pages.components.navbar
 import se.typelias.htmxtest.web.pages.components.standardHTMLTemplate
 
 fun createCounterPage(): String = standardHTMLTemplate("Counter") {
-    classes = setOf("bg-gray-200", "text-gray-800")
-    navbar().render()
     div {
         classes = setOf("flex", "justify-center", "mt-4")
         div {
